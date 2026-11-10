@@ -1,4 +1,4 @@
-# 📊 Student Performance Factors Analysis (SQL & Python) — ADY201m
+#  Student Performance Factors Analysis (SQL & Python) — ADY201m
 
 > **Course:** Data Science with Python & SQL (`ADY201m`) — FPT University  
 > **Repository:** `https://github.com/baole16/ADY201m`
