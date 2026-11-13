@@ -84,7 +84,6 @@ Toàn bộ thư mục bài nộp (`ass`) được tổ chức khoa học thành 
 │
 ├── 5_Visualize/                                   # Hình ảnh trực quan hóa trích xuất từ phân tích
 │   ├── Hình 1.jpg                                 # Phân phối điểm thi (Histogram & KDE)
-│   ├── Hình 2.jpg                                 # Tương quan Giờ học & Điểm danh với Điểm thi
 │   ├── Hình 3.jpg                                 # Ma trận tương quan (Correlation Heatmap)
 │   ├── Hình 4.jpg                                 # Violin/Boxplot các biến phân loại trọng tâm
 │   ├── Hình 5.jpg                                 # Phân tích theo Giới tính, Loại trường & Ngoại khóa
