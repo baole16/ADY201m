@@ -21,13 +21,6 @@ WHERE CAST(Attendance AS REAL) >= 90
 ORDER BY CAST(Exam_Score AS REAL) DESC, student_id
 LIMIT 10;
 
--- 4.2 So sinh vien va diem TB theo loai truong & gioi tinh
-SELECT School_Type, Gender, COUNT(*) AS students,
-       ROUND(AVG(CAST(Exam_Score AS REAL)), 2) AS avg_exam_score
-FROM raw_students
-GROUP BY School_Type, Gender
-ORDER BY School_Type, Gender;
-
 -- ---------------------------------------------------------------------
 -- BUOC 5 - DATA UNDERSTANDING: kiem tra chat luong du lieu
 -- ---------------------------------------------------------------------

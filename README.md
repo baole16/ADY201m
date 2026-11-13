@@ -76,7 +76,7 @@ Toàn bộ thư mục bài nộp (`ass`) được tổ chức khoa học thành 
 ├── 4_Source Code/                                 # Mã nguồn SQL, Python Notebooks & Database
 │   ├── PhanTich_10Buoc_SQL_Python.ipynb           # Notebook triển khai 10 bước Khoa học Dữ liệu (SQL + Python)
 │   ├── StudentPerformanceAnalysis.ipynb           # Notebook EDA, Kiểm định thống kê & Hồi quy tuyến tính
-│   ├── TruyVan_LamSach_PhanTich.sql               # Kịch bản 14 truy vấn làm sạch & phân tích SQL
+│   ├── TruyVan_LamSach_PhanTich.sql               # Kịch bản 13 truy vấn làm sạch & phân tích SQL
 │   ├── student_analysis.db                        # Cơ sở dữ liệu SQLite (raw_students, students_clean_sql)
 │   ├── StudentPerformanceFactors.csv              # File dữ liệu kết nối trực tiếp với Notebook
 │   ├── Source_Code.zip                            # Gói nén toàn bộ mã nguồn

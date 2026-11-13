@@ -13,62 +13,55 @@
        3125 Female            19         90              Low                  College         94
        4406   Male            25         98             High             Postgraduate         94 
 
-===== Truy vấn 2  4.2 So sinh vien va diem TB theo loai truong & gioi tinh
-School_Type Gender  students  avg_exam_score
-    Private Female       843           67.30
-    Private   Male      1166           67.28
-     Public Female      1950           67.22
-     Public   Male      2648           67.21 
-
-===== Truy vấn 3  BUOC 5 - DATA UNDERSTANDING: kiem tra chat luong du lieu
+===== Truy vấn 2  BUOC 5 - DATA UNDERSTANDING: kiem tra chat luong du lieu
  total_rows
        6607 
 
-===== Truy vấn 4  Ban ghi trung toan bo
+===== Truy vấn 3  Ban ghi trung toan bo
  duplicate_groups
                 0 
 
-===== Truy vấn 5  Gia tri thieu (NULL hoac rong)
+===== Truy vấn 4  Gia tri thieu (NULL hoac rong)
  null_teacher_quality  null_parent_edu
                    78               90 
 
-===== Truy vấn 6  Gia tri ngoai pham vi hop ly
+===== Truy vấn 5  Gia tri ngoai pham vi hop ly
  exam_out_0_100  prev_out_0_100  attendance_out_0_100  sleep_out_0_24  hours_out_0_168
               1               0                     0               0                0 
 
-===== Truy vấn 7  Gia tri ngoai pham vi hop ly
+===== Truy vấn 6  Gia tri ngoai pham vi hop ly
  student_id Hours_Studied Attendance Previous_Scores Exam_Score
        1526            27         98              93        101 
 
-===== Truy vấn 8  BUOC 6 - DATA PREPARATION: lam sach tren BANG MOI (khong sua du lieu goc)
+===== Truy vấn 7  BUOC 6 - DATA PREPARATION: lam sach tren BANG MOI (khong sua du lieu goc)
  clean_rows  unknown_teacher_quality  unknown_parent_edu  exam_score_set_null
        6607                       78                  90                    1 
 
-===== Truy vấn 9  BUOC 7 - MODELING: phan nhom quy tac (CASE WHEN + CTE + window function)
+===== Truy vấn 8  BUOC 7 - MODELING: phan nhom quy tac (CASE WHEN + CTE + window function)
 study_group  student_count  avg_exam_score  avg_attendance  diff_vs_overall  score_rank
    1. <=10h            365           63.97           80.15            -3.26           4
   2. 11-20h           3179           66.18           80.05            -1.05           3
   3. 21-30h           2809           68.51           79.94             1.28           2
     4. >30h            253           71.01           79.13             3.78           1 
 
-===== Truy vấn 10  Dong luc (dong) x Su tham gia cua phu huynh (cot)
+===== Truy vấn 9  Dong luc (dong) x Su tham gia cua phu huynh (cot)
 motivation_level  parent_low  parent_medium  parent_high
              Low       65.81          66.51        67.71
           Medium       66.41          67.20        68.21
             High       66.82          67.71        68.38 
 
-===== Truy vấn 11  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
+===== Truy vấn 10  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
  total_students  avg_score  unknown_parent_edu  unknown_teacher_quality  missing_exam_score
            6607     67.231                  90                       78                   1 
 
-===== Truy vấn 12  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
+===== Truy vấn 11  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
 attendance_group  students  avg_score
      1. Duoi 70%      1573      64.21
       2. 70-<80%      1681      66.28
       3. 80-<90%      1607      68.04
       4. 90-100%      1746      70.12 
 
-===== Truy vấn 13  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
+===== Truy vấn 12  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
 parental_education_level extracurricular_activities  students  avg_score  diff_vs_overall
             Postgraduate                        Yes       774      68.15             0.92
             Postgraduate                         No       531      67.71             0.48
@@ -79,7 +72,7 @@ parental_education_level extracurricular_activities  students  avg_score  diff_v
              High School                         No      1317      66.55            -0.68
                  Unknown                         No        40      66.55            -0.68 
 
-===== Truy vấn 14  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
+===== Truy vấn 13  BUOC 8 - EVALUATION: danh gia, so sanh nhom (CTE + JOIN)
  student_id motivation_level  hours_studied  attendance  exam_score  group_avg  above_group_avg
          95           Medium             18          89         100      67.33            32.67
        2426              Low             23          83          99      66.73            32.27
@@ -87,4 +80,4 @@ parental_education_level extracurricular_activities  students  avg_score  diff_v
        6394              Low             16          83          98      66.73            31.27
        4193           Medium             28          90          98      67.33            30.67 
 
-Hoàn tất: 14 truy vấn. Bảng students_clean_sql đã được tạo trong sql_rieng.db.
+Hoàn tất: 13 truy vấn. Bảng students_clean_sql đã được tạo trong sql_rieng.db.
