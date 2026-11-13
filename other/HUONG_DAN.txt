@@ -1,8 +1,0 @@
-BAI THUC HANH 10 BUOC - SQL & PYTHON
-
-1. Cai pandas, numpy, notebook: pip install pandas numpy notebook nbclient
-2. Dat file .ipynb va CSV trong cung thu muc (da duoc dong goi).
-3. Mo Jupyter Notebook va Run All notebook.
-4. Notebook tao student_analysis.db va 3 file CSV ket qua.
-5. TruyVan_LamSach_PhanTich.sql: cau lenh SQLite co the chay doc lap sau khi nhap CSV vao bang raw_students.
-6. Tap trung trinh bay buoc 4-8. Cac buoc 1-3, 9-10 gon nhe.

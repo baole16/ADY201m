@@ -1,4 +1,4 @@
-#  Student Performance Factors Analysis (SQL & Python) — ADY201m
+# Student Performance Factors Analysis (SQL & Python) — ADY201m
 
 > **Course:** Data Science with Python & SQL (`ADY201m`) — FPT University  
 > **Repository:** `https://github.com/baole16/ADY201m`
@@ -87,16 +87,10 @@ Toàn bộ thư mục bài nộp (`ass`) được tổ chức khoa học thành 
 │   ├── Hình 2.jpg                                 # Tương quan Giờ học & Điểm danh với Điểm thi
 │   ├── Hình 3.jpg                                 # Ma trận tương quan (Correlation Heatmap)
 │   ├── Hình 4.jpg                                 # Violin/Boxplot các biến phân loại trọng tâm
-│   ├── Hình 5.jpg                                 # Phân tích theo Giới tính, Loại trường, Internet & Ngoại khóa
-│   ├── Hình 6.jpg                                 # Phân phối tổng hợp tất cả các biến định lượng
-│   └── Hình 7.jpg                                 # Pairplot đa biến các yếu tố chính
+│   ├── Hình 5.jpg                                 # Phân tích theo Giới tính, Loại trường & Ngoại khóa
+│   ├── Hình 6.jpg                                 # Phân phối điểm theo Nhóm giờ học & Chuyên cần (SQL)
+│   └── Hình 7.jpg                                 # Ma trận tương tác & Hệ số Hồi quy tuyến tính (R² = 85.8%)
 │
-├── other/                                         # Các script chạy tự động, kết quả log & bản sao lưu
-│   ├── chay_sql.py / CHAY_SQL.bat                 # Script thực thi tự động truy vấn SQL
-│   ├── ket_qua_chay_sql.txt / HUONG_DAN.txt       # Log kết quả chạy SQL & hướng dẫn sử dụng
-│   └── analysis_study_groups.csv                  # Bảng tổng hợp kết quả phân nhóm học tập
-│
-├── student_performance_cleaned_python.csv         # Dữ liệu xuất ra từ quy trình làm sạch Python
 └── README.md                                      # Tài liệu hướng dẫn và mô tả dự án
 ```
 
@@ -110,10 +104,11 @@ Toàn bộ thư mục bài nộp (`ass`) được tổ chức khoa học thành 
    - **Điểm số trước đó (`Previous_Scores`)** có tương quan thuận mức độ vừa ($r = +0.175$).
 2. **Phân nhóm bằng SQL (`CASE WHEN` & `Window Functions`):**
    - Nhóm học **> 30 giờ/tuần** đạt trung bình **71.01 điểm** (+3.78 điểm so với mức chung 67.23), trong khi nhóm học **≤ 10 giờ/tuần** chỉ đạt **63.97 điểm** (-3.26 điểm).
-   - Nhóm điểm danh **90–100%** đạt trung bình **70.11 điểm**, cao hơn **+5.90 điểm** so với nhóm điểm danh **< 70%** (64.21 điểm).
-3. **Kiểm định giả thuyết (ANOVA & T-test):**
+   - Nhóm điểm danh **90–100%** ($n = 1,745$ bản ghi hợp lệ) đạt trung bình **70.12 điểm**, cao hơn **+5.91 điểm** so với nhóm điểm danh **< 70%** (64.21 điểm).
+3. **Kiểm định giả thuyết & Mô hình Hồi quy (ANOVA, T-test & Linear Regression):**
    - Các yếu tố `Access_to_Resources` ($F = 98.00, p < 0.001$), `Parental_Involvement` ($F = 84.49, p < 0.001$), `Parental_Education_Level` ($F = 36.43, p < 0.001$), `Peer_Influence` ($F = 34.05, p < 0.001$), `Family_Income` ($F = 29.79, p < 0.001$) đều có ảnh hưởng có ý nghĩa thống kê rất cao.
    - Ngược lại, `Gender` và `School_Type` không tạo ra sự khác biệt có ý nghĩa thống kê ($p > 0.05$).
+   - Mô hình **Hồi quy tuyến tính** đơn giản với 5 biến chính sau khi lọc outliers IQR `[59, 75]` đạt độ chính xác **$R^2 = 85.8\%$**.
 
 ---
 
@@ -123,5 +118,5 @@ Toàn bộ thư mục bài nộp (`ass`) được tổ chức khoa học thành 
 |---|---|---|
 | **Trưởng nhóm & Data Engineer (`baole16`)** | Thiết kế CSDL SQLite, xây dựng pipeline làm sạch dữ liệu SQL & Python, quản lý GitHub Repository | `3_Dataset/`, `4_Source Code/TruyVan_LamSach_PhanTich.sql`, `student_analysis.db`, `README.md` |
 | **Data Analyst (EDA & Visualization)** | Thống kê mô tả, kiểm tra IQR Outliers, xây dựng 7 biểu đồ trực quan hóa dữ liệu | `4_Source Code/StudentPerformanceAnalysis.ipynb`, `5_Visualize/Hình 1..7.jpg` |
-| **Statistical & ML Modeler** | Triển khai quy trình 10 bước Khoa học Dữ liệu, kiểm định ANOVA/T-test và mô hình Hồi quy tuyến tính | `4_Source Code/PhanTich_10Buoc_SQL_Python.ipynb`, `other/chay_sql.py` |
+| **Statistical & ML Modeler** | Triển khai quy trình 10 bước Khoa học Dữ liệu, kiểm định ANOVA/T-test và mô hình Hồi quy tuyến tính | `4_Source Code/PhanTich_10Buoc_SQL_Python.ipynb`, `4_Source Code/chay_sql.py` |
 | **Documentation & Presentation** | Biên soạn báo cáo song ngữ Việt - Anh và thiết kế Slide thuyết trình | `1_Report/Report_VI.docx`, `1_Report/Report_EN.docx`, `2_Slide/Slide_VI.pptx`, `2_Slide/Slide.pptx` |
