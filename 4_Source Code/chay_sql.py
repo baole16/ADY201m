@@ -1,16 +1,4 @@
-"""Chạy TruyVan_LamSach_PhanTich.sql bằng Python (không cần cài đặt sqlite3 rời).
-
-Cách dùng:
-  - Nhấp đúp trực tiếp vào file `chay_sql.py` hoặc `CHAY_SQL.bat`
-  - Hoặc chạy trong Terminal / VS Code từ bất kỳ thư mục nào:
-        python chay_sql.py
-
-Script sẽ:
-  1. Tự động tìm file `StudentPerformanceFactors.csv` và `TruyVan_LamSach_PhanTich.sql`
-     (kể cả khi chạy từ thư mục khác hoặc mở trực tiếp từ file nén Source_Code.zip)
-  2. Tạo database `sql_rieng.db`, nhập dữ liệu vào bảng `raw_students`
-  3. Chạy lần lượt 14 câu lệnh trong `TruyVan_LamSach_PhanTich.sql`
-  4. In kết quả của từng câu SELECT ra màn hình và lưu vào `ket_qua_chay_sql.txt`
+"""Chạy TruyVan_LamSach_PhanTich.sql bằng Python 
 """
 import csv
 import io
@@ -104,7 +92,7 @@ def format_table(rows: list[tuple], cols: list[str]) -> str:
 
 
 def load_csv_to_sqlite(csv_path: Path, conn: sqlite3.Connection, table_name: str) -> int:
-    """Nhập file CSV vào bảng SQLite (hỗ trợ cả khi có hoặc không có pandas)."""
+ 
     with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.reader(f)
         headers = next(reader)
@@ -126,12 +114,12 @@ def main() -> int:
     sql_path = find_project_file("TruyVan_LamSach_PhanTich.sql")
 
     if not csv_path:
-        print("❌ Lỗi: Không tìm thấy file 'StudentPerformanceFactors.csv'.")
-        print("👉 Vui lòng giải nén toàn bộ file Source_Code.zip ra một thư mục trước khi chạy.")
+        print(" Lỗi: Không tìm thấy file 'StudentPerformanceFactors.csv'.")
+        print(" Vui lòng giải nén toàn bộ file Source_Code.zip ra một thư mục trước khi chạy.")
         return 1
     if not sql_path:
-        print("❌ Lỗi: Không tìm thấy file 'TruyVan_LamSach_PhanTich.sql'.")
-        print("👉 Vui lòng giải nén toàn bộ file Source_Code.zip ra một thư mục trước khi chạy.")
+        print(" Lỗi: Không tìm thấy file 'TruyVan_LamSach_PhanTich.sql'.")
+        print(" Vui lòng giải nén toàn bộ file Source_Code.zip ra một thư mục trước khi chạy.")
         return 1
 
     # Lưu sql_rieng.db và ket_qua_chay_sql.txt cùng thư mục với file SQL (hoặc thư mục tạm nếu chỉ đọc)
@@ -175,7 +163,7 @@ def main() -> int:
 
     try:
         out_txt.write_text("\n".join(output_lines), encoding="utf-8")
-        print(f"📄 Đã lưu toàn bộ kết quả vào: {out_txt}")
+        print(f" Đã lưu toàn bộ kết quả vào: {out_txt}")
     except Exception:
         pass
 
